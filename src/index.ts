@@ -1,8 +1,9 @@
-import express from "express";
+import express, { json } from "express";
 import itemsRoutes from "./routes/items/index";
 
 const port = 3000;
 const app = express();
+app.use(json());
 
 app.get("/", (req, res) => {
   res.send("My API 1");
