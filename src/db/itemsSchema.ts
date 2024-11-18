@@ -11,6 +11,7 @@ export const itemsTable = pgTable("items", {
   name: varchar({ length: 255 }).notNull(),
   description: text(),
   image: varchar({ length: 255 }),
-  quantity: integer(),
+  quantity: integer().default(0),
+  importance: text(),
   price: doublePrecision().notNull(),
 });
